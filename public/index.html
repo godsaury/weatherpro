@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>weather-pro</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+      $(function(){  
+          initpage();  
+          $(window).resize(function(){  
+            initpage();  
+          })        
+          function initpage(){  
+            var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;  
+            var _html = document.getElementsByTagName('html')[0];  
+            view_width>480?_html.style.fontSize=view_width/24 +'px':_html.style.fontSize =view_width/24+'px';  
+          }  
+      });
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but weather-pro doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
